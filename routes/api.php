@@ -55,7 +55,7 @@ Route::apiResource('eventos', EventoController::class);
 
 Route::middleware('auth:sanctum')->post('/imagem-eventos/{id}', [ImagemEventoController::class, 'store'])->name('postImagemEvento');
 Route::get('/imagem-eventos', [ImagemEventoController::class, 'index'])->name('getImagemEventos');
-Route::get('/imagem-eventos/{id}', [ImagemEventoController::class, 'show'])->name('getImagemEvento');
+Route::get('/imagem-eventos/{id}', [ImagemEventoController::class, 'show'])->where('id', '[0-9]+')->name('getImagemEvento');
 Route::middleware('auth:sanctum')->put('/imagem-eventos/{id}', [ImagemEventoController::class, 'update'])->name('updateImagemEvento');
 Route::middleware('auth:sanctum')->delete('/imagem-eventos/{id}', [ImagemEventoController::class, 'destroy'])->name('deleteImagemEvento');
 
