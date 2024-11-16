@@ -22,6 +22,7 @@ class InicioCardInformacionalController extends Controller
         $request->validate([
             'quantidade' => 'required|numeric',
             'subtitulo' => 'required|string|max:255',
+            'borderColor' => 'required|string|max:255',
         ]);
 
         $card = inicioCardsInformacionai::create($request->all());
