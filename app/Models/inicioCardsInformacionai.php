@@ -17,5 +17,6 @@ class inicioCardsInformacionai extends Model
     protected $fillable = [
         'quantidade',
         'subtitulo',
+        'borderColor',
     ];
 }

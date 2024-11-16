@@ -1,3 +1,4 @@
+
 <?php
 
 use Illuminate\Database\Migrations\Migration;
@@ -11,11 +12,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('inicio_cards_informacionais', function (Blueprint $table) {
+        Schema::create('inicio_fazer_diferenca', function (Blueprint $table) {
             $table->id();
-            $table->float('quantidade');
-            $table->text('subtitulo');
-            $table->string('borderColor');
+            $table->string('imagem');
             $table->timestamps();
         });
     }
@@ -25,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('inicio_cards_informacionais');
+        Schema::dropIfExists('inicio_fazer_diferenca');
     }
 };
